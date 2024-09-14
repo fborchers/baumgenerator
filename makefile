@@ -34,7 +34,7 @@ TX:= latex
 # Logfile :
 LOG:= build/compile.log
 
-build/baum.dvi: build/baum.tex build/psbaum.tex
+build/baum.dvi: tex/baum.tex build/psbaum.tex
 	@#echo "Running LaTeX on input file (compilation log in $(LOG))..."
 	@#echo "\t $(TX) -output-directory=build $<"
 	@$(TX) -interaction=batchmode -output-directory=build $< > $(LOG) 2>&1
@@ -61,7 +61,7 @@ clean:
 	@rm -f build/psbaum.tex
 
 	@rm -f build/baum.aux
-	@#rm -f build/baum.tex  keep this!
+	@#rm -f tex/baum.tex  don't remove this file!
 	@rm -f build/baum.dvi
 	@rm -f build/baum.ps
 	@rm -f build/baum.pdf
