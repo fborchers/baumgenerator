@@ -15,8 +15,12 @@
 # 'soffice' is a command-line tool to convert from LibreOffice to textfile.
 soffice := soffice --headless --convert-to csv:"Text - txt - csv (StarCalc)":59,ANSI,0 
 
+# Double-check if build/ directory exists:
+build/:
+	@mkdir -p $@
+
 # The bit 1 (or 2) >/dev/null at end of line will suppress printing to the terminal.
-build/generator.csv: generator.xls
+build/generator.csv: generator.xls | build/
 	@$(soffice) $< 1>/dev/null 2>/dev/null
 	@mv generator.csv $@
 
