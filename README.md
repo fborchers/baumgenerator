@@ -17,7 +17,7 @@ Der Baumgenerator dient dem Erstellen von Baumdiagrammen, wie sie in der Wahrsch
 
 Ein Beispiel für die erzeugten Baumdiagramme (Voreinstellungen des Programms):
 
-![Beispiel für die erzeugten Baumdiagramme](https://github.com/fborchers/baumgenerator/beispielbaum.jpg)
+![Beispiel für die erzeugten Baumdiagramme](https://github.com/fborchers/baumgenerator/blob/main/beispielbaum.jpg)
 
 System-Voraussetzungen
 ----------------------
