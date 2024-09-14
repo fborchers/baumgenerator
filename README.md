@@ -3,8 +3,8 @@ Baumgenerator
 =============
 
 erstellt am: 7.12.2019  
-bearbeitet am: 9.9.2024  
-Autoren: Jochen Bauer (generator.xls) und Florian Borchers (makefile)
+bearbeitet am: 14.9.2024  
+Autoren: Jochen Bauer (`generator.xls`) und Florian Borchers (`makefile`)
 
 Der Baumgenerator dient dem Erstellen von Baumdiagrammen, wie sie in der Wahrscheinlichkeitsrechnung typisch sind. Dabei wird vor allem an die Anwendung in der Schule gedacht. Folgende Parameter können eingestellt werden (`generator.xls`):
 
@@ -31,7 +31,7 @@ kann geprüft werden, ob diese Hilfsprogramme gefunden auf der lokalen Version v
 
 Anwendung
 ---------
-
+Das Baumdiagramm wird mit den Voreinstellungen in `generator.xls` ausgegeben. Die Routine erzeugt die Datei `out_baum.pdf`.
 ```
 make pdf
 ```
