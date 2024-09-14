@@ -50,7 +50,7 @@ build/%.pdf: build/%.ps
 
 
 
-.PHONY: clean pdf
+.PHONY: clean pdf test
 
 out_baum.pdf: build/baum.pdf
 	@mv $< $@
@@ -73,19 +73,13 @@ clean:
 
 
 
-
-
-
-# This is the content of file "build/baum.tex"
-
-
-#    \documentclass[12pt]{article}
-#    \usepackage[ansinew]{inputenc}
-#    \usepackage{pst-tree}
-#    \usepackage[a4paper, margin=5mm, top=25mm, left=25mm]{geometry}
-#    
-#    \begin{document}
-#    \input{build/psbaum.tex}
-#    \end{document}
-
-# End of file baum.tex .
+test: 
+	@# LibreOffice :
+	@echo "1. LibreOffice command soffice verfügbar?"
+	@soffice --version
+	@# sed :
+	@echo "2. Command-line sed verfügbar?"
+	@echo "SED ist installiert" | sed -e 's/SED/sed/'
+	@# LaTeX :
+	@echo "3. LaTeX verfügbar?"
+	@latex --version

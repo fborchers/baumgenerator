@@ -23,7 +23,11 @@ Der Generator arbeitet mit MS Excel, wobei Open Office ebenfalls funktionieren s
   - soffice
   - sed
   - Gnu make
-
+Mithilfe von 
+```
+make test
+```
+kann geprüft werden, ob diese Hilfsprogramme gefunden auf der lokalen Version vefügbar sind. 
 
 Anwendung
 ---------
