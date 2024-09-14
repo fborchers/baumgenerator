@@ -15,6 +15,9 @@ Der Baumgenerator dient dem Erstellen von Baumdiagrammen, wie sie in der Wahrsch
  5. Wahrscheinlichkeiten auf den Pfaden gekürzt (ja/nein)
  6. Ergebnisse gekürzt (ja/nein)
 
+Ein Beispiel für die erzeugten Baumdiagramme (Voreinstellungen des Programms):
+
+![Beispiel für die erzeugten Baumdiagramme](https://github.com/fborchers/baumgenerator/beispielbaum.jpg)
 
 System-Voraussetzungen
 ----------------------
@@ -36,11 +39,16 @@ Das Baumdiagramm wird mit den Voreinstellungen in `generator.xls` ausgegeben. Di
 make pdf
 ```
 
-In MS Excel (`generator.xls`) werden in den blau hinterlegten Felder die entsprechenden Parameter festgelegt. Excel berechnet automatisch und sofort ("on the fly") den entsprechenden Code innerhalb der Datei. Die fett gedruckten Zeilen werden kopiert und in `baum.tex` eingefügt. Das Wrapper-File `baumgenerator.tex` wird mit 
+In MS Excel (`generator.xls`) werden in den blau hinterlegten Felder die entsprechenden Parameter festgelegt. Excel berechnet automatisch und sofort ("on the fly") den entsprechenden Code innerhalb der Datei. Man speichert die Datei und erzeugt das neue Baumdiagramm mit `make pdf`.
+
+
+Manuelle Anwendung
+------------------
+Nach der Festlegung der Parameter in `generator.xls` werden die Zeilen unter dem Abschnitt "Nach LaTeX kopieren" kopiert. Diese Zeilen werden in der Datei `tex/baum.tex` anstelle der Zeile 
 ```
-latex baumgenerator.tex
+\input{build/psbaum.tex}
 ```
-übersetzt. Dieser Teil der Anwendung ist in der Make-Routine zusammengefasst. 
+eingefügt. Die Datei `tex/baum.tex` kann nun kompiliert werden. 
 
 
 Einschränkungen
